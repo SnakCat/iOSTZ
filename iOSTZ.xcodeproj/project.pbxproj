@@ -17,6 +17,7 @@
 		520726752D788121004DDBE0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520726742D788121004DDBE0 /* NetworkManager.swift */; };
 		520726772D788161004DDBE0 /* TodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520726762D788161004DDBE0 /* TodoModel.swift */; };
 		520726792D7882D2004DDBE0 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520726782D7882D2004DDBE0 /* RequestError.swift */; };
+		5207267B2D788705004DDBE0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5207267A2D788705004DDBE0 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		520726742D788121004DDBE0 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		520726762D788161004DDBE0 /* TodoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoModel.swift; sourceTree = "<group>"; };
 		520726782D7882D2004DDBE0 /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
+		5207267A2D788705004DDBE0 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				520726742D788121004DDBE0 /* NetworkManager.swift */,
 				520726762D788161004DDBE0 /* TodoModel.swift */,
 				520726782D7882D2004DDBE0 /* RequestError.swift */,
+				5207267A2D788705004DDBE0 /* Extensions.swift */,
 			);
 			path = iOSTZ;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 				520726792D7882D2004DDBE0 /* RequestError.swift in Sources */,
 				5207265F2D763B95004DDBE0 /* ViewController.swift in Sources */,
 				5207265B2D763B95004DDBE0 /* AppDelegate.swift in Sources */,
+				5207267B2D788705004DDBE0 /* Extensions.swift in Sources */,
 				520726752D788121004DDBE0 /* NetworkManager.swift in Sources */,
 				520726772D788161004DDBE0 /* TodoModel.swift in Sources */,
 				5207265D2D763B95004DDBE0 /* SceneDelegate.swift in Sources */,
