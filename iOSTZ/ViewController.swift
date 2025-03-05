@@ -57,7 +57,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
     }
 
     private func setupUI() {
-        view.backgroundColor = .systemBlue
+        view.backgroundColor = .black
 
         titleLabel.text = "Задачи"
         titleLabel.textColor = .white
@@ -78,6 +78,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
         
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.register(CustomCell.self, forCellReuseIdentifier: "CustomCell")
         
     }
 }
@@ -88,7 +89,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        UITableViewCell()
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as? CustomCell {
+            return cell
+        }
+        return UITableViewCell()
     }
     
     
