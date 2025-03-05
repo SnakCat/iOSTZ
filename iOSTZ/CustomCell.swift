@@ -14,7 +14,7 @@ final class CustomCell: UITableViewCell {
     private let titleLabel = UILabel()
     private let descriptionLabel = UILabel()
     private let dateLabel = UILabel()
-    private let checkboxButton = CheckboxButton()
+    private var checkboxButton = CheckboxButton()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -68,14 +68,18 @@ final class CustomCell: UITableViewCell {
         contentView.backgroundColor = .black
         containerView.backgroundColor = .black
         
-        titleLabel.text = "Новая заметка"
         titleLabel.textColor = .white
         
-        descriptionLabel.text = "Тут будет какой то текст для новой заметки с ее описанием"
         descriptionLabel.numberOfLines = .zero
         descriptionLabel.textColor = .white
         
         dateLabel.text = "24/24/24"
         dateLabel.textColor = .gray
+    }
+    
+    func configureCell(todo: TodoModel) {
+        titleLabel.text = "id: \(todo.id), userId: \(todo.userId)"
+        descriptionLabel.text = todo.todo
+        checkboxButton.isSelected = todo.isCompleted
     }
 }

@@ -20,13 +20,18 @@ final class NetworkManager {
     }
     
     func getTodos(completion: @escaping(Result<[TodoModel], RequestError>) -> ()) {
-        AF.request(Constants.baseURL + EndPoint.todos).responseJSON { todosResponse in
+        AF.request(Constants.baseURL + EndPoint.todos)
+            .validate()
+            .responseDecodable(of: TodoResponse.self) { todosResponse in
             switch todosResponse.result {
-            case .success(let todos):
-                print(todos)
-            case .failure(let failure):
-                print(failure)
+            case .success(let todoResponse):
+                completion(.success(todoResponse.todos))
+            case .failure:
+                completion(.failure(.errorRequest))
+                
             }
         }
     }
+
 }
+

@@ -22,3 +22,6 @@ struct TodoModel: Codable {
     }
 }
 
+struct TodoResponse: Codable {
+    let todos: [TodoModel]
+}
